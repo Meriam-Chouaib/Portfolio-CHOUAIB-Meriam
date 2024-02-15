@@ -21,4 +21,5 @@ export const StylesConstants = {
   HeightImageWithCercle: '190px',
   WidthImageWithCercle: '190px',
   WidthImageWith: '180px',
+  green: '#98e098',
 }

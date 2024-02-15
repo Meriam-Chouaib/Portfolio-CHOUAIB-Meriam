@@ -57,7 +57,7 @@ const CountDownQuestion = ({
       <BoxTimer>
         <TextTimer>
           {timerTime}
-          <sup style={{ verticalAlign: 'baseline' }}>{t('common.seconde')}</sup>
+          <sup style={{ verticalAlign: 'middle' }}>{t('common.seconde')}</sup>
         </TextTimer>
       </BoxTimer>
     </BoxCountWatch>

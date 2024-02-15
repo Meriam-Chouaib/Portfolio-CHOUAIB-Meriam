@@ -1,4 +1,5 @@
 import CustomImage from 'components/CustomImage/CustomImage'
+import { StylesConstants } from 'config/constant/styles.constants'
 import {
   BoxIndexQuestion,
   QuestionIndexImageStyle,
@@ -16,10 +17,10 @@ function IndexQuestion({
         <CustomImage src={quizBlackIcon} alt='question index' />
       </QuestionIndexImageStyle>
       <>
-        <span className='question-index-strong'>
+        <span style={{ color: StylesConstants.green }}>
           {questionIndex < nbrQuestions ? questionIndex + 1 : nbrQuestions}
         </span>
-        <span className='question-index-sm'>/{nbrQuestions}</span>
+        <span>/{nbrQuestions}</span>
       </>
     </BoxIndexQuestion>
   )

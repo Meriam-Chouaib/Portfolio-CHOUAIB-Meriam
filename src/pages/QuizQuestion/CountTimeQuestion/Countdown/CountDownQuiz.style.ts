@@ -12,7 +12,8 @@ export const BoxTimer = styled(Box)({
 export const TextTimer = styled(Typography)(({ theme }) => ({
   fontFamily: GlobalFonts.FONT_PRIMARY_BOLD,
   fontSize: '25px',
-  color: theme.palette.primary.main,
+  color: 'red',
+  fontWeight: 'bold',
   [theme.breakpoints.down('sm')]: {
     fontSize: '20px',
   },

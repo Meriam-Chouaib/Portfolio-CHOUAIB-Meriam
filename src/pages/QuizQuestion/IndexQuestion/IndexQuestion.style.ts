@@ -16,4 +16,6 @@ export const BoxIndexQuestion = styled(Box)({
   borderRadius: '0px 6px 6px 0px',
   padding: '5px',
   display: 'flex',
+  alignItems: 'center',
+  fontWeight: 'bold',
 })
