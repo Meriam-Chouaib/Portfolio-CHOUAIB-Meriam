@@ -1,5 +1,6 @@
 import { SxProps } from '@mui/material'
 import { RegisterOptions } from 'react-hook-form'
+import { InputSize } from 'types/interfaces/Input.type'
 
 export interface InputsArray {
   id: number
@@ -21,6 +22,8 @@ export interface InputObject {
   disabled?: boolean
   placeholder?: string
   styled?: SxProps
+  autoComplete?: boolean
+  size?: InputSize
 }
 
 export interface SelectOption {

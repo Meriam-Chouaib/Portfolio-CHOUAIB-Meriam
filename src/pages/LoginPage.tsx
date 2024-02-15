@@ -1,3 +1,4 @@
+import { Stack } from '@mui/material'
 import BoxCenterPage from 'components/Common/BoxCenterPage/BoxCenterPage'
 import Title from 'components/Common/Title/Title'
 import { RouteIdEnum } from 'config/enums/routes.enum'

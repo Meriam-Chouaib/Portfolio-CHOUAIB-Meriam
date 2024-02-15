@@ -1,6 +1,5 @@
 import { Checkbox, FormControlLabel, Stack, Typography } from '@mui/material'
 import AuthCustomLoadingButton from 'components/CustomButtons/AuthCustomLoadingButton/AuthCustomLoadingButton'
-import GenericInput from 'components/CustomInputs/GenericInput/GenericInput'
 import { RouterPaths } from 'config/constant'
 import {
   BoxStyle,
@@ -18,6 +17,10 @@ import { loginFormConfig } from 'features/Auth/LoginForm/LoginForm.constants'
 import CustomTooltip from 'components/Tooltips/CustomTooltip/CustomTooltip'
 import useLogin from 'features/Auth/LoginForm/useLogin'
 import { useNavigate } from 'react-router'
+import GenericInput from 'components/CustomInputs/GenericInput/GenericInput'
+import { GlobalVariables } from 'config/constant'
+import { InputSize, InputTypes } from 'types/interfaces/Input.type'
+import { InputObject } from 'types/interfaces/FormTypes/InputObject'
 
 function LoginForm() {
   const { t } = useTranslation()
@@ -29,12 +32,39 @@ function LoginForm() {
     handleSubmit,
     formMethods,
   } = useLogin()
-
+  const emailObject: InputObject = {
+    label: 'auth.email',
+    inputType: InputTypes.TEXT,
+    fieldName: 'email',
+    placeholder: 'common.mail_placeholder',
+    autoComplete: true,
+    defaultValue: '',
+    valueOptions: {
+      minLength: GlobalVariables.Inputs.shortText.minLength,
+      maxLength: GlobalVariables.Inputs.longText.maxLength,
+    },
+    config: {
+      required: 'auth.email_required',
+      pattern: {
+        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        message: 'auth.email_invalid',
+      },
+      minLength: {
+        value: GlobalVariables.Inputs.shortText.minLength,
+        message: 'auth.email_too_short',
+      },
+      maxLength: {
+        value: GlobalVariables.Inputs.longText.maxLength,
+        message: 'auth.email_too_long',
+      },
+    },
+    size: InputSize.MEDIUM,
+  }
   return (
     <FormProvider {...formMethods}>
       <RootStyle onSubmit={handleSubmit}>
         <Stack spacing={2.375} justifyContent='center'>
-          <GenericInput inputObject={loginFormConfig.email} />
+          <GenericInput inputObject={emailObject} />
           <GenericInput inputObject={loginFormConfig.password} />
           <Stack direction='row' alignItems={'center'}>
             <FormControlLabel
