@@ -17,11 +17,14 @@ export const StackTimeQuestion = styled(Stack)({
   width: '100%',
   top: '20px',
 })
-export const ButtonNext = styled(Button)({
+export const ButtonNext = styled(Button)(({ theme }) => ({
   backgroundColor: 'red',
   padding: '10px 0px',
-  width: '72%',
+  width: '70%',
   borderRadius: '24px',
   color: '#fff',
   fontWeight: 'bold',
-})
+  [theme.breakpoints.down('md')]: {
+    width: '100%',
+  },
+}))
