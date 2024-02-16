@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { CustomImageProps } from './CustomImage.type';
-import { Skeleton } from '@mui/material';
+import { useState } from 'react'
+import { CustomImageProps } from './CustomImage.type'
+import { Skeleton } from '@mui/material'
 
 export default function CustomImage({
   src,
@@ -12,13 +12,17 @@ export default function CustomImage({
   withSkeleton,
   imgCompressed,
   imgPlaceholder,
+  borderRadius,
 }: CustomImageProps) {
-  const [loaded, setLoaded] = useState(false);
-  const imgSrc = src ? src : imgPlaceholder;
+  const [loaded, setLoaded] = useState(false)
+  const imgSrc = src ? src : imgPlaceholder
   return (
     <>
       <img
-        style={{ display: withSkeleton && !loaded ? 'none' : undefined }}
+        style={{
+          display: withSkeleton && !loaded ? 'none' : undefined,
+          borderRadius: borderRadius,
+        }}
         src={loaded ? imgSrc : imgCompressed ? imgCompressed : imgSrc}
         onLoad={() => setLoaded(true)}
         alt={alt || 'image'}
@@ -26,19 +30,19 @@ export default function CustomImage({
         width={width ? width : 'auto'}
         className={className}
         onError={(e) => {
-          setLoaded(true);
-          onError?.(e);
+          setLoaded(true)
+          onError?.(e)
         }}
       />
       {withSkeleton && !loaded && (
         <Skeleton
           component={'img'}
-          variant="rectangular"
+          variant='rectangular'
           height={height}
           width={width}
           className={className}
         />
       )}
     </>
-  );
+  )
 }

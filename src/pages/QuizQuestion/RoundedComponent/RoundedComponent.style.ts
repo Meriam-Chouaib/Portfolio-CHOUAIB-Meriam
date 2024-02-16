@@ -6,8 +6,9 @@ export const StackStyled = styled(Stack)(
     backgroundImage: `url(${bgImg})`,
     height: '200px',
     width: '100%',
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     borderRadius: '0rem 0rem 7rem 7rem',
+    backgroundPosition: 'center',
   })
 )

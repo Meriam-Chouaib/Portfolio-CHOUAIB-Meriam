@@ -7,6 +7,16 @@ export default function Button(theme: Theme) {
         root: {
           boxShadow: 'none',
           transition: '0s',
+          backgroundColor: 'red',
+          borderRadius: '65px',
+          padding: '10px 10px',
+          height: '40px',
+          color: '#fff',
+
+          fontWeight: 'bold',
+          '&:hover': {
+            backgroundColor: '#f40909b5',
+          },
         },
         sizeLarge: {
           height: 50,

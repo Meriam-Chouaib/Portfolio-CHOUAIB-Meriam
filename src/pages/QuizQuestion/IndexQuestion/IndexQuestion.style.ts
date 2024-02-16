@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import { styled } from '@mui/system'
+import { StylesConstants } from 'config/constant/styles.constants'
 export const QuestionIndexImageStyle = styled(Box)(({ theme }) => ({
   marginRight: '5px',
   lineHeight: 0,
@@ -19,3 +20,9 @@ export const BoxIndexQuestion = styled(Box)({
   alignItems: 'center',
   fontWeight: 'bold',
 })
+export const ItemNumStyled = styled('span')(
+  ({ fontSize }: { fontSize?: string }) => ({
+    color: StylesConstants.green,
+    fontSize: fontSize,
+  })
+)

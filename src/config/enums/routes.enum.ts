@@ -9,4 +9,5 @@ export enum RouteIdEnum {
   Auth = 'auth',
   ForgetPassword = '/forget',
   quizQuestion = '/quiz-question',
+  quizByCategory = '/quiz-by-category',
 }

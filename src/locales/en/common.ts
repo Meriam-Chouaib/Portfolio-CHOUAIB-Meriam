@@ -3,4 +3,5 @@ export const common = {
   password_placeholder: 'Password',
   continue: 'Continue',
   seconde: 'Sec',
+  secondes: 'Secondes',
 }
