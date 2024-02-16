@@ -11,5 +11,6 @@ export interface CustomImageProps {
   withSkeleton?: boolean
   imgCompressed?: string
   imgPlaceholder?: string
+  margin?: string
   borderRadius?: string
 }

@@ -13,6 +13,7 @@ export default function CustomImage({
   imgCompressed,
   imgPlaceholder,
   borderRadius,
+  margin,
 }: CustomImageProps) {
   const [loaded, setLoaded] = useState(false)
   const imgSrc = src ? src : imgPlaceholder
@@ -22,6 +23,7 @@ export default function CustomImage({
         style={{
           display: withSkeleton && !loaded ? 'none' : undefined,
           borderRadius: borderRadius,
+          margin: margin ? margin : '',
         }}
         src={loaded ? imgSrc : imgCompressed ? imgCompressed : imgSrc}
         onLoad={() => setLoaded(true)}

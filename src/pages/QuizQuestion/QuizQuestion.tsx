@@ -10,6 +10,7 @@ import {
 import IndexQuestion from 'pages/QuizQuestion/IndexQuestion/IndexQuestion'
 import quizBlackIcon from 'assets/images/quiz-icon-footer.svg'
 import CountTimeQuestion from 'pages/QuizQuestion/CountTimeQuestion/CountTimeQuestion'
+import { GlobalFonts } from 'config/pages/fonts.config'
 
 export const answers = [
   'ipsum dolor sit amet consectetur',
@@ -20,7 +21,7 @@ export const answers = [
 function QuizQuestion() {
   return (
     <Stack sx={{ position: 'relative' }}>
-      <RoundedComponent bgColor='pink' bgImg={imageLibrary} />
+      <RoundedComponent bgImg={imageLibrary} bgSize='cover' />
       <StackTimeQuestion>
         <IndexQuestion
           quizBlackIcon={quizBlackIcon}
@@ -37,10 +38,20 @@ function QuizQuestion() {
 
       <Stack alignItems={'center'} position={'relative'}>
         <StackAnswers gap={2}>
-          <Typography variant='h2' sx={{ textAlign: 'center' }}>
+          <Typography
+            variant='h2'
+            sx={{
+              textAlign: 'center',
+              fontFamily: GlobalFonts.FONT_PRIMARY,
+              fontWeight: 'bold',
+            }}
+          >
             Quiz: Music
           </Typography>
-          <Typography>
+
+          <Typography
+            sx={{ fontFamily: GlobalFonts.FONT_PRIMARY, textAlign: 'center' }}
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
             mollitia quae pariatur ?
           </Typography>

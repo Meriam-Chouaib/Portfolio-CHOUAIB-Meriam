@@ -3,7 +3,6 @@ export interface IndexQuestionProps {
   questionIndex?: number
   nbrQuestions?: number
   fontSize?: string
-  img?: string
 
   itemNum?: number
 }

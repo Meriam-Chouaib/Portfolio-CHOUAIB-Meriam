@@ -1,13 +1,22 @@
 import { styled, Stack, Button } from '@mui/material'
 
-export const StackAnswers = styled(Stack)({
+export const StackAnswers = styled(Stack)(({ theme }) => ({
   width: '75%',
-  backgroundColor: '#fffaf2',
+  backgroundColor: '#fdfbf9',
   padding: '15px',
   alignItems: 'center',
   position: 'absolute',
-  top: '-80px',
-})
+  borderRadius: '10px',
+  top: '-50px',
+  border: '1px solid #d8d8d8',
+
+  [theme.breakpoints.down('md')]: {
+    top: '-50px',
+  },
+  [theme.breakpoints.down('md')]: {
+    top: '-60px',
+  },
+}))
 export const StackTimeQuestion = styled(Stack)({
   display: 'flex',
   alignItems: 'center',

@@ -8,19 +8,14 @@ import {
 import { IndexQuestionProps } from 'pages/QuizQuestion/IndexQuestion/IndexQuestion.type'
 
 function IndexQuestion({
-  img,
   questionIndex,
   nbrQuestions,
   fontSize,
   itemNum,
+  quizBlackIcon,
 }: IndexQuestionProps) {
   return (
     <BoxIndexQuestion>
-      {img && (
-        <QuestionIndexImageStyle>
-          <CustomImage src={img} alt='question index' />
-        </QuestionIndexImageStyle>
-      )}
       {itemNum && <ItemNumStyled fontSize={fontSize}>{itemNum}</ItemNumStyled>}
       {questionIndex && nbrQuestions && (
         <>
@@ -29,6 +24,16 @@ function IndexQuestion({
           </ItemNumStyled>
           <ItemNumStyled fontSize={fontSize}>/{nbrQuestions}</ItemNumStyled>
         </>
+      )}
+      {quizBlackIcon && (
+        <QuestionIndexImageStyle>
+          <CustomImage
+            src={quizBlackIcon}
+            alt='question index'
+            margin='0px 0px  0px 10px'
+            height='20px'
+          />
+        </QuestionIndexImageStyle>
       )}
     </BoxIndexQuestion>
   )
