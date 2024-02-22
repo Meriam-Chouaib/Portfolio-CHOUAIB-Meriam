@@ -1,9 +1,10 @@
-import { styled, Stack, Button } from '@mui/material'
+import { styled, Stack, Button, Typography } from '@mui/material'
+import { GlobalFonts } from 'config/pages/fonts.config'
 
 export const StackAnswers = styled(Stack)(({ theme }) => ({
   width: '75%',
   backgroundColor: '#fdfbf9',
-  padding: '15px',
+  padding: '24px',
   alignItems: 'center',
   position: 'absolute',
   borderRadius: '10px',
@@ -37,3 +38,7 @@ export const ButtonNext = styled(Button)(({ theme }) => ({
     width: '100%',
   },
 }))
+export const QuestionText = styled(Typography)({
+  fontFamily: GlobalFonts.FONT_PRIMARY,
+  textAlign: 'center',
+})

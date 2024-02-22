@@ -9,17 +9,14 @@ export const BoxMenu = styled(Box)(({ theme }) => ({
   },
 }))
 export const BoxHeader = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.main,
+  backgroundColor: '#fff',
   height: '4rem',
   display: 'flex',
   alignItems: 'center',
+  borderBottom: '2.2px solid red',
 }))
 export const BoxDrawer = styled(Box)(({ theme }) => ({
-  display: 'none',
-
-  [theme.breakpoints.down('md')]: {
-    display: 'block',
-  },
+  display: 'block',
 }))
 export const LinkBox = styled(Box)({
   backgroundColor: 'black',

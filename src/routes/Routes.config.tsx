@@ -30,6 +30,11 @@ const RoutesConfig: RouteObject[] = [
         path: RouteIdEnum.About,
         element: <AboutPage />,
       },
+      {
+        path: RouteIdEnum.quizByCategory,
+        children: [],
+        element: <QuizByCategoryPage />,
+      },
     ],
     element: <MainLayout />,
   },
@@ -38,10 +43,10 @@ const RoutesConfig: RouteObject[] = [
     children: [],
     element: <QuizQuestion />,
   },
-  {
-    path: RouteIdEnum.quizByCategory,
-    children: [],
-    element: <QuizByCategoryPage />,
-  },
+  // {
+  //   path: RouteIdEnum.quizByCategory,
+  //   children: [],
+  //   element: <QuizByCategoryPage />,
+  // },
 ]
 export default RoutesConfig

@@ -4,6 +4,7 @@ import { Grid, Stack, Typography } from '@mui/material'
 import AnswerQuestion from 'pages/AboutPage/AnswerQuestion/AnswerQuestion'
 import {
   ButtonNext,
+  QuestionText,
   StackAnswers,
   StackTimeQuestion,
 } from 'pages/QuizQuestion/QuizQuestion.style'
@@ -11,14 +12,16 @@ import IndexQuestion from 'pages/QuizQuestion/IndexQuestion/IndexQuestion'
 import quizBlackIcon from 'assets/images/quiz-icon-footer.svg'
 import CountTimeQuestion from 'pages/QuizQuestion/CountTimeQuestion/CountTimeQuestion'
 import { GlobalFonts } from 'config/pages/fonts.config'
+import { useState } from 'react'
 
 export const answers = [
-  'ipsum dolor sit amet consectetur',
-  'ipsum dolor sit  consectetur',
-  'ipsum sit amet consectetur ipsum dolor',
-  'ipsum sit amet consectetur ipsum dolor',
+  'ipsum dolor ',
+  'sit consectetur',
+  'ipsum dolor',
+  'ipsum sit dolor',
 ]
 function QuizQuestion() {
+  const [activeAnswer, setActiveAnswer] = useState(0)
   return (
     <Stack sx={{ position: 'relative' }}>
       <RoundedComponent bgImg={imageLibrary} bgSize='cover' />
@@ -49,15 +52,13 @@ function QuizQuestion() {
             Quiz: Music
           </Typography>
 
-          <Typography
-            sx={{ fontFamily: GlobalFonts.FONT_PRIMARY, textAlign: 'center' }}
-          >
+          <QuestionText>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
             mollitia quae pariatur ?
-          </Typography>
+          </QuestionText>
           <Grid container spacing={2}>
             {answers.map((item, index) => (
-              <Grid item xs={12} md={6} key={index}>
+              <Grid item xs={12} md={12} key={index}>
                 <AnswerQuestion txt={item}></AnswerQuestion>
               </Grid>
             ))}

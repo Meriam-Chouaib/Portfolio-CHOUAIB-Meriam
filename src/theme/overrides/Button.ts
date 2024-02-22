@@ -1,4 +1,5 @@
 import { Theme } from '@mui/material'
+import { GlobalFonts } from 'config/pages/fonts.config'
 
 export default function Button(theme: Theme) {
   return {
@@ -12,7 +13,7 @@ export default function Button(theme: Theme) {
           padding: '10px 10px',
           height: '40px',
           color: '#fff',
-
+          fontFamily: GlobalFonts.FONT_PRIMARY,
           fontWeight: 'bold',
           '&:hover': {
             backgroundColor: '#f40909b5',

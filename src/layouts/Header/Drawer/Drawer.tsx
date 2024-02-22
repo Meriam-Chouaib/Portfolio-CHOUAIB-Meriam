@@ -81,8 +81,8 @@ export default function TemporaryDrawer() {
     <>
       {
         <React.Fragment key={'left'}>
-          <ButtonDrawer onClick={toggleDrawer(true)} variant='outlined'>
-            <MenuIcon />
+          <ButtonDrawer onClick={toggleDrawer(true)} variant='contained'>
+            <MenuIcon sx={{ fontSize: '1.8rem' }} />
           </ButtonDrawer>
           <Drawer
             anchor={'left'}

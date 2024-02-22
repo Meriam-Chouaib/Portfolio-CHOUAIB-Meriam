@@ -1,6 +1,6 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography'
 import { Shadows } from 'config/constant/colors.config'
-import { GlobalFonts } from 'config/constant/fonts.config'
+import { GlobalFonts } from 'config/pages/fonts.config'
 
 const typography: TypographyOptions = {
   fontFamily: GlobalFonts.FONT_PRIMARY,
@@ -9,7 +9,7 @@ const typography: TypographyOptions = {
   fontWeightBold: 900,
   h1: {
     fontWeight: 700,
-    fontFamily: GlobalFonts.FONT_DANCING_SCRIPT,
+    fontFamily: GlobalFonts.FONT_PRIMARY,
 
     lineHeight: '5rem',
     fontSize: '4.5rem',
@@ -17,19 +17,19 @@ const typography: TypographyOptions = {
   },
   h2: {
     fontWeight: 500,
-    fontFamily: GlobalFonts.FONT_PRIMARY_500,
+    fontFamily: GlobalFonts.FONT_PRIMARY,
     fontSize: '1.563rem',
     lineHeight: '2.188rem',
   },
   h3: {
     fontWeight: 500,
-    fontFamily: GlobalFonts.FONT_PRIMARY_500,
+    fontFamily: GlobalFonts.FONT_PRIMARY,
     fontSize: '1.125rem',
     lineHeight: '1.563rem',
   },
   h4: {
     fontWeight: 500,
-    fontFamily: GlobalFonts.FONT_PRIMARY_500,
+    fontFamily: GlobalFonts.FONT_PRIMARY,
     fontSize: '1rem',
     lineHeight: '1.438rem',
   },
@@ -42,7 +42,7 @@ const typography: TypographyOptions = {
   },
   h6: {
     fontWeight: 500,
-    fontFamily: GlobalFonts.FONT_PRIMARY_500,
+    fontFamily: GlobalFonts.FONT_PRIMARY,
     fontSize: '1rem',
     lineHeight: '1.563rem',
   },
@@ -57,13 +57,13 @@ const typography: TypographyOptions = {
     lineHeight: '1.25rem',
   },
   subtitle1: {
-    fontFamily: GlobalFonts.FONT_PRIMARY_300,
+    fontFamily: GlobalFonts.FONT_PRIMARY,
     fontSize: '0.938rem',
     lineHeight: '1.438rem',
   },
   subtitle2: {
     fontWeight: 300,
-    fontFamily: GlobalFonts.FONT_PRIMARY_500,
+    fontFamily: GlobalFonts.FONT_PRIMARY,
     fontSize: '0.9rem',
     lineHeight: '1rem',
   },
